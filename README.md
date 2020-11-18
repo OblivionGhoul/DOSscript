@@ -21,7 +21,11 @@ Delete the hashtag in front of these lines if you want to log how many times the
 #connectedCount += 1
 #print(connectedCount)
 ```
-4. Save the document and run the python code.
+4. Decide how many threads you want to run.
+```
+for i in range(10): (Change the number 10 to how many threads you want to run) (ex: for i in range(100):)
+```
+5. Save the document and run the python code.
 
 # Contributions
-All contributions are welcome. This is just a basic script, so there are many things to improve on. 
+All contributions are welcome. This is just a basic script, so there are many things to improve on.
