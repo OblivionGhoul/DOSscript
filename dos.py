@@ -16,9 +16,9 @@ def attack():
         s.close()
 
         #You can uncomment the lines below to print out how many times this code is ran, but it will slow down the script.
-        global connectedCount
-        connectedCount += 1
-        print(connectedCount)
+        #global connectedCount
+        #connectedCount += 1
+        #print(connectedCount)
 
 for i in range(10): #Insert how many threads you want to run (note: python does not support multithreading, it is being simulated)
     thread = threading.Thread(target=attack)
