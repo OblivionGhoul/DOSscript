@@ -6,7 +6,7 @@
 - My [website](https://oblivionghoul.com/).
 - For more info on DDOS Attacks, view this [document](https://its.fsu.edu/sites/g/files/imported/storage/original/application/dfd40f8b7415faa8fc306afa529520da.pdf).
 
-# Setup
+# Setup (DOS)
 1. Download the code and edit the python document.
 2. Enter the target ip, the port, and the fakeip.
 ```
