@@ -1,4 +1,4 @@
-# Notes
+# Notes 
 - This is for educational purposes only as it is illegal.
 - You can try the code on your own network or website.
 - This script is very basic and inefficient.
